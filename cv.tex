@@ -21,7 +21,7 @@
 
 \documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
 
-\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+%\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
 
 \begin{document}
 
@@ -49,28 +49,6 @@ NodeJS \& Javascript
 \end{aside}
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\section{education}
-
-\begin{entrylist}
-%------------------------------------------------
-\entry
-{2011 - 2014}
-{Masters {\normalfont of Science}}
-{Comenius University, Bratislava}
-{\emph{Implementation of Offline Transfer System pluggable into batch middleware?} \\ Work project. Fast performant transfer adapter, very similar to ETL tools.}
-%------------------------------------------------
-\entry
-{2008 - 2011}
-{Bachelor {\normalfont of Science}}
-{Slovak University of Technology, Bratislava}
-{Specialization in Informatics}
-%------------------------------------------------
-\end{entrylist}
-
-%----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
@@ -91,15 +69,15 @@ Development of new generation transfer system, pluggable into the existing middl
 \item Advanced usage of GNU tool chain, including HP-UX gdb, and AIX dbx debuggers. 
 
 \item Minor development in python and shell, mainly to support testing, and PL/SQL to integrate into the middleware.
-\end{itemize}
+\end{itemize}}
 
 %------------------------------------------------
 \entry
-{Summer 2010}
+{2010}
 {SOOP}
-{Bratislava Slovakia}
+{Bratislava, Slovakia}
 {\emph{Summer Intern} \\
-Comparing and creating test cases for multiple compression libraries against multiple file types, for archiving purposes.
+Comparing and creating test cases for multiple compression libraries against multiple file types, for archiving purposes.}
 %------------------------------------------------
 \end{entrylist}
 
@@ -107,18 +85,26 @@ Comparing and creating test cases for multiple compression libraries against mul
 %	AWARDS SECTION
 %----------------------------------------------------------------------------------------
 
+%\section{awards}
+%
+%\begin{entrylist}
+------------------------------------------------
+%\entry
+%{2011}
+%{Postgraduate Scholarship}
+%{School of Business, The University of California}
+%{Awarded to the top student in their final year of a Bachelors degree.}
+------------------------------------------------
+%\end{entrylist}
+
+
 \section{technical skills}
-
-\section{awards}
-
 \begin{entrylist}
-%------------------------------------------------
 \entry
-{2011}
-{Postgraduate Scholarship}
-{School of Business, The University of California}
-{Awarded to the top student in their final year of a Bachelors degree.}
-%------------------------------------------------
+{C++}
+{Deep specialization, and strong preference of this programming language}
+{3 years}
+{Cross-platform application development, utilization of various 3rd party libraries, e.g. Boost, Qt, etc. Ability to maintain and support complex applications through various different platforms.}
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
@@ -144,36 +130,35 @@ Comparing and creating test cases for multiple compression libraries against mul
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{education}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2011 - 2014}
+{Masters {\normalfont of Science}}
+{Comenius University, Bratislava}
+{\emph{Implementation of Offline Transfer System pluggable into batch middleware?} \\ Work project. Fast performant transfer adapter, very similar to ETL tools.}
+%------------------------------------------------
+\entry
+{2008 - 2011}
+{Bachelor {\normalfont of Science}}
+{Slovak University of Technology, Bratislava}
+{Specialization in Informatics}
+%------------------------------------------------
+\end{entrylist}
+
+
+%----------------------------------------------------------------------------------------
 %	INTERESTS SECTION
 %----------------------------------------------------------------------------------------
 
 \section{interests}
 
 \textbf{professional:} data analysis, company profiling, risk analysis, economics, web design, web app creation, software design, marketing \textbf{personal:} piano, chess, cooking, dancing, running
-
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS SECTION
-%----------------------------------------------------------------------------------------
-
-\section{publications}
-
-\printbibsection{article}{article in peer-reviewed journal} % Print all articles from the bibliography
-
-\printbibsection{book}{books} % Print all books from the bibliography
-
-\begin{refsection} % This is a custom heading for those references marked as "inproceedings" but not containing "keyword=france"
-\nocite{*}
-\printbibliography[sorting=chronological, type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=subbibliography]
-\end{refsection}
-
-\begin{refsection} % This is a custom heading for those references marked as "inproceedings" and containing "keyword=france"
-\nocite{*}
-\printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=subbibliography]
-\end{refsection}
-
-\printbibsection{misc}{other publications} % Print all miscellaneous entries from the bibliography
-
-\printbibsection{report}{research reports} % Print all research reports from the bibliography
 
 %----------------------------------------------------------------------------------------
 
