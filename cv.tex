@@ -21,11 +21,13 @@
 
 \documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
 
+\usepackage[none]{hyphenat}
+
 %\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
 
 \begin{document}
 
-\header{tomas}{kislan}{c++ developer} % Your name and current job title/field
+\header{tomas}{kislan}{c++ \& javascript \& sql developer} % Your name and current job title/field
 
 %----------------------------------------------------------------------------------------
 %	SIDEBAR SECTION
@@ -33,8 +35,8 @@
 
 \begin{aside} % In the aside, each new line forces a line break
 \section{contact}
-Furdekova 2
-Bratislava 851 03
+Bulharska 26
+Bratislava 821 04
 Slovak Republic
 ~
 +421 918 797 745
@@ -43,11 +45,14 @@ Slovak Republic
 \section{languages}
 slovak mother tongue
 english fluency
+german learning
 \section{programming}
+NodeJS, Express
+Angular, React, Redux
+Docker (compose)
 C++, Boost, Qt \& QML
-NodeJS \& Javascript
-Python
-PL/SQL
+Python, Robot Framework
+PL/SQL, PL/pgSQL
 \end{aside}
 
 %----------------------------------------------------------------------------------------
@@ -60,30 +65,29 @@ PL/SQL
 %------------------------------------------------
 \entry
 {2014 - Now}
-{Kistler}
+{Software Developer @ Kistler}
+%{global leader in dynamic pressure, force, torque, and acceleration measurement}
 {Bratislava, Slovakia}
-{\emph{Software Developer} \\
-Working on both C++ backend(mainly) and Javascript frontend parts of an application running on an embedded device. 
-Application is expected to be a successor to older version of software, that is one of the best in field of plastic injections.
+{\emph{Global leader in dynamic measurement technology} \\
+Working in an agile team on both \textbf{C++} backend and \textbf{Javascript} (\textbf{ReactJS}, AngularJS) frontend parts of an application running on an embedded device, which is being used for monitoring and controlling of plastic injection process.
 \\
-Maintaining a custom linux distribution used on the embedded device, including multiple background linux services, e.g. web server, logging, etc.
-Responsible for system integrity, installation process, and continuous user friendly upgrade on customer devices.
+Maintaining a custom linux distribution (using \textbf{Yocto}/OpenEmbedded), including multiple background linux services, e.g. web server, logging, etc.
 \\
-Also maintaining a quality development environment, like build systems for various parts of the application, and whole continuous integration process.
+Configuring and maintaining a quality development environment, including continuous integration process, using \textbf{Docker}, \textbf{Jenkins}, etc.
 }
 \entry
 {2010 - 2014}
-{Erste Group IT SK}
+{Solutions Developer @ Erste Group IT SK}
 {Bratislava, Slovakia}
-{\emph{Solutions Developer} \\
-Development of new generation transfer system, pluggable into the existing middleware, with heavy usage of asynchronous and multi-threaded programming paradigm. Created multi-agent system, with custom developed network TCP communication to allow best throughput. Huge emphasis placed on extensibility, thus API is provided to allow fast development cycles of new features.
+{\emph{Subsidiary company of Slovenska Sporitelna, developing banking system} \\
+Design and development of new \textbf{multi-agent transfer system}, pluggable into the existing middleware, with use of asynchronous and multi-threaded programming paradigm.
+\\
+It's being used as an alternative to commercial (mostly Java) \textbf{ETL} tools, to transfer data between multiple systems, including \textbf{DWH}, as it performed at least 2x faster when transferring data between databases.
 
 \begin{itemize}
-\item Deployment and maintenance through multiple different operating systems, such as Linux, Windows, OS X, HP-UX, AIX, Solaris.
-\item Experience with multiple 3rd party libraries, Boost (asio/thread), Oracle Call Interface, etc. 
-\item Advanced usage of GNU tool chain, valgrind, including HP-UX's gdb, and AIX dbx debuggers. 
+\item Huge emphasis placed on extensibility, simple configurability, and performance. 
+\item Deployment and maintenance on multiple different operating systems, such as Linux, Windows, OS X, HP-UX, AIX, Solaris.
 \item Minor development in python and shell, mainly to support testing, and PL/SQL to integrate into the middleware.
-
 \item Mentoring summer interns, and helping them with C++ comprehension.
 \end{itemize}}
 
@@ -93,63 +97,120 @@ Development of new generation transfer system, pluggable into the existing middl
 {SOOP}
 {Bratislava, Slovakia}
 {\emph{Summer Intern} \\
-Comparing and creating test cases for multiple compression libraries against multiple file types, for archiving purposes.}
+Comparing, and creating test cases for multiple compression libraries against multiple file types, for archiving purposes.}
 %------------------------------------------------
 \end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{projects}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2016 - Now}
+{DockMan}
+{Docker web management}
+{\url{https://gitlab.com/tkislan/dockman}
+\\
+OSS project
+\\
+Material design, user friendly web management of docker engine.
+\\
+NodeJS and ReactJS + Redux application.
+}
+%------------------------------------------------
+\entry
+{2016 - Now}
+{Metropolitan Real}
+{Reality office web site}
+{\url{http://www.metropolitanreal.sk}
+\\
+Material design ReactJS application, with a NodeJS backend, backed up by PostgreSQL database. Implemented server-side rendering for faster page rendering, and Search Engine Optimization. Searching through properties is boosted by Postgres Trigram extension, which is a very effective way for measuring the similarity of words in many natural languages. 
+}
+%------------------------------------------------
+\end{entrylist}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{education}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2011 - 2014}
+{Masters {\normalfont of Science}}
+{Comenius University, Bratislava}
+{Specialization in Applied Informatics\\
+\emph{Implementation of Offline Transfer System pluggable into batch middleware}\\ 
+Masters thesis and a work project. Fast performant transfer adapter, essentialy an ETL tools.}
+%------------------------------------------------
+\entry
+{2008 - 2011}
+{Bachelor {\normalfont of Science}}
+{Slovak University of Technology, Bratislava}
+{Specialization in Informatics}
+%------------------------------------------------
+\entry
+{2014 - Now}
+{Conferences}
+{Worldwide}
+{Attending different conferences on a yearly basis. E.g. webexpo, fosdem, craft, etc.}
+\end{entrylist}
+%------------------------------------------------
 
 %----------------------------------------------------------------------------------------
 %	TECHNICAL SKILLS SECTION
 %----------------------------------------------------------------------------------------
 
-\newpage
-
 \section{technical skills}
 \begin{entrylist}
 \entry
 {C++}
-{Deep specialization, and strong preference of this programming language}
-{4 years}
-{Cross-platform application development, utilization of various 3rd party libraries, e.g. Boost, Qt/QML, OpenSSL, OCI etc. Ability to maintain and support complex applications through various different platforms. Practical usage of C++11 standard in medium size applications.}
+{Middleware and embedded applicaitons}
+{5 years}
+{Cross-platform application development, using various 3rd party libraries, e.g. \textbf{Boost}, Qt/QML, OpenSSL, OCI etc. Ability to maintain and support complex applications through various different platforms. Practical usage of \textbf{C++14} standard. Performance tuning using gperf, valgrind, etc.}
 
 \entry
 {Javascript}
 {Experience with larger single page applications}
-{2 years}
-{Development of complex embedded application in AngularJS framework, but striving to more bleeding edge technologies like ReactJS, etc.}
+{3 years}
+{Development of a complex embedded application in AngularJS, but nowadays striving to \textbf{ReactJS} \& \textbf{Redux}.
+\\
+Design and development of \textbf{NodeJS} backend with rest api endpoints using Express. Using ReactJS server-side rendering to increase search index of search engine crawlers.
+\\
+Practical knowledge of \textbf{webpack}, and it's internals, including a development of custom plugins.}
 
 \entry
-{NodeJS}
-{Personal, hobby development}
+{Docker}
+{Development and production deployment}
 {2 years}
-{Ability to create complex back-end applications, with the advantage of sharing the same code base with the client side. Fancy the asynchronous approach to event processing.}
+{Setting up cross-platform development environment with \textbf{docker-compose}, building production images, and managing deployment of multiple containers.}
 
 \entry
 {Python}
-{Basic knowledge}
+{Scripting \& Robot Framework}
 {2 years}
-{Used to create testing scripts, to assist in development of more complex C++ applications. Proved useful in prototyping several features.}
+{Used to create testing scripts, to assist in development of more complex C++ applications. Proved useful in prototyping several features. Writing simple simulator applications. Extending Robot Framework with custom embedded application requirements.}
 
 \entry
-{PL/SQL}
-{Advanced usage in the enterprise}
+{Databases}
+{Oracle, PostgreSQL, \& MongoDB}
 {3 years}
-{Basic knowledge of Oracle database internal processes, to provide the best performance. Used to implement utility packages to handle integration, and to maintain and monitor existing software.}
+{Basic knowledge of database internal processes, ability to tune the performance. Used to implement utility packages to handle integration, and to maintain and monitor existing software. Advanced knowledge of \textbf{PL/SQL} and \textbf{PL/pgSQL}.}
 
 \entry
 {Linux, Yocto}
 {Development OS, Maintenance of custom distribution}
-{1 year}
-{Used as main development OS, and its usage is highly preferred for best efficiency.
-\\
-Also experienced with building custom distribution using the OpenEmbedded(Yocto) build framework,
-advanced linux OS administration, including configuring and maintaining various linux services.
-}
-
-\entry
-{UML}
-{Light usage, to better comprehend processes}
-{}
-{Used both before and after the development cycle, to better understand and present the architecture and processes in the application.}
+{2 years}
+{Experienced with building custom distribution using the Yocto/OpenEmbedded build framework,
+advanced linux OS administration, including configuring and maintaining various linux services.}
 
 \end{entrylist}
 
@@ -171,30 +232,6 @@ advanced linux OS administration, including configuring and maintaining various 
 
 \end{entrylist}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\section{education}
-
-\begin{entrylist}
-%------------------------------------------------
-\entry
-{2011 - 2014}
-{Masters {\normalfont of Science}}
-{Comenius University, Bratislava}
-{Specialization in Applied Informatics\\
-\emph{Implementation of Offline Transfer System pluggable into batch middleware?}\\ 
-Both masters thesis and work project. Fast performant transfer adapter, very similar to ETL tools.}
-%------------------------------------------------
-\entry
-{2008 - 2011}
-{Bachelor {\normalfont of Science}}
-{Slovak University of Technology, Bratislava}
-{Specialization in Informatics}
-%------------------------------------------------
-\end{entrylist}
-
 
 %----------------------------------------------------------------------------------------
 %	INTERESTS SECTION
@@ -202,9 +239,9 @@ Both masters thesis and work project. Fast performant transfer adapter, very sim
 
 \section{interests}
 
-\textbf{professional:} GUI application development, raspberry pi, bleeding edge web technologies
+\textbf{professional:} GUI application development, raspberry pi \& odroid, bleeding edge web technologies
 \\
-\textbf{personal:} volleyball, biking, fitness, books, my car
+\textbf{personal:} volleyball, biking, fitness, books, my vw golf
 
 %----------------------------------------------------------------------------------------
 
